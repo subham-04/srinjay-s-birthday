@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(37, 37, 37);
+  color: aliceblue;
+}
+
+.c-tilt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  position: relative;
+  cursor: pointer;
+}
+
+.c-tilt__logo {
+  display: block;
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+}
+
+.c-tilt__srinjoy {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Paytone One", sans-serif;
+  color: #eaaa13;
+}
+
+.c-tilt__fd {
+  font-size: 2rem;
+  font-family: "Cormorant", serif;
+  color: #d6a386;
+}
+
+.timer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+video {
+  background-position: top;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(44, 44, 44, 0.391);
+  z-index: 20;
+}
+
+.container {
+  display: flex;
+  min-width: 70rem;
+  min-height: 40rem;
+  color: #252525;
+  margin: 0 auto;
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  font-family: "Nunito", sans-serif;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+input {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  background: #fff;
+  outline: none;
+  font-family: "Nunito", sans-serif;
+}
+
+label {
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 0.45rem;
+  margin-top: 15px;
+  border: none;
+  text-transform: uppercase;
+  background: #006959;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.45s;
+}
+
+.btn {
+  position: absolute;
+  margin: 0 auto;
+  width: 15rem;
+  text-align: center;
+  border: none;
+  padding: 0.5rem 3rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  background: #006959;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.45s;
+  border-radius: 0.45rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #011c18;
+  color: white;
+}
+
+button:hover {
+  background: #011c18;
+  color: white;
+}
+
+/* Countdown */
+ul {
+  margin-left: -45px;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+.complete-title {
+  -webkit-animation: complete 4s infinite;
+          animation: complete 4s infinite;
+}
+
+@-webkit-keyframes complete {
+  0% {
+    color: #930d10;
+    transform: scale(1.11);
+  }
+  25% {
+    color: #fc6e09;
+    transform: scale(1.67);
+  }
+  50% {
+    color: #34a853;
+    transform: scale(2.1);
+  }
+  75% {
+    color: #1a73e8;
+    transform: scale(1.95);
+  }
+  100% {
+    color: #fbbc04;
+    transform: scale(1.51);
+  }
+}
+
+@keyframes complete {
+  0% {
+    color: #930d10;
+    transform: scale(1.11);
+  }
+  25% {
+    color: #fc6e09;
+    transform: scale(1.67);
+  }
+  50% {
+    color: #34a853;
+    transform: scale(2.1);
+  }
+  75% {
+    color: #1a73e8;
+    transform: scale(1.95);
+  }
+  100% {
+    color: #fbbc04;
+    transform: scale(1.51);
+  }
+}
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 1020px) {
+  .video-background {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+  video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 25%;
+       object-position: 25%;
+  }
+  .container {
+    min-height: 245px;
+    padding: 20px;
+    margin: 10px;
+  }
+  .input-container {
+    top: unset;
+  }
+  .countdown {
+    position: relative;
+    top: 10px;
+  }
+  .form {
+    width: unset;
+  }
+  input {
+    width: 93%;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  li {
+    font-size: 15px;
+  }
+  li span {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=styles.css.map */
