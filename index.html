@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./5286162e-0cbe-438c-809b-915140574071a.jpg-output.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Srinjay Saha</title>
+</head>
+<body>
+    <div class="c-tilt">
+        <img class="c-tilt__logo" src="./srinjoy.jpeg" alt="srinjay">
+        <div class="c-tilt__srinjoy"> Srinjay Saha - The Tharkiest One</div>
+        <p class="c-tilt__fd">How is the Josh ?</p>
+    </div>
+
+    <main class="timer">
+        <video  class="video-background" loop autoplay muted>
+            <source src="./srinjay.mp4"></source>
+        </video>
+        <div class="video-overlay"></div>
+        <div class="container">
+            <div class="input-container" id="input-container" >
+                <h1>Birthday Countdown</h1>
+                <form class="form" id="countdownForm">
+                    <label for="title">Title</label>
+                    <input type="text" for="title" placeholder="Countdown reason">
+                    <label for="date-picker">Select Installation Date</label>
+                    <input type="date" for="date-picker" id="date-picker">
+                    <button  type="submit">Start</button>
+                </form>
+            </div>
+
+            <!-- countdown -->
+            <div class="countdown" id="countdown" hidden>
+                <h1 id="countdown-title">
+                    
+                </h1>
+
+                <ul>
+                    <li><span></span> Days</li>
+                    <li><span></span> Hours</li>
+                    <li><span></span> Minutes</li>
+                    <li><span></span> Seconds</li>
+                </ul>
+                <button id="countdown-button">Reset</button>
+            </div>
+
+            <div class="complete" id="complete" hidden>
+                <h1 >
+                    Time Reached
+                </h1>
+                <h1 class="complete-title" id="complete-info">
+                    Happy Birthday
+                </h1>
+                <a href="https://www.facebook.com/" class="btn" id="complete-button">Memories</a>
+
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
